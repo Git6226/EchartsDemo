@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+/* 声明字体*/
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+body {
+  background: url(../images/bg.jpg) no-repeat top center;
+  line-height: 1.15;
+}
+header {
+  position: relative;
+  height: 1.25rem;
+  background: url(../images/head_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+header h1 {
+  text-align: center;
+  color: white;
+  line-height: 1rem;
+  font-size: 0.475rem;
+}
+header .showTime {
+  top: 0;
+  position: absolute;
+  right: 0.375rem;
+  line-height: 0.9375rem;
+  font-size: 0.25rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.mainbox {
+  display: flex;
+  min-width: 1024px;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 300px;
+  padding: 0.125rem 0.125rem 0;
+}
+.mainbox .column {
+  flex: 3;
+}
+.mainbox .column:nth-child(2) {
+  margin: 0 0.125rem 0.1875rem;
+  flex: 5;
+}
+.mainbox .panel {
+  position: relative;
+  height: 3.875rem;
+  border: 0.0125rem solid rgba(15, 186, 139, 0.17);
+  background: url(../images/line\(1\).png);
+  padding: 0 0.1875rem 0.5rem;
+  margin-bottom: 0.1875rem;
+}
+.mainbox .panel::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel .panel-fotter {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.mainbox .panel .panel-fotter::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel .panel-fotter::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel h2 {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color: white;
+  font-size: 0.25rem;
+  font-weight: 400;
+}
+.mainbox .panel h2 a {
+  color: white;
+  margin: 0 0.125rem;
+  text-decoration: none;
+}
+.mainbox .panel .chart {
+  height: 3rem;
+}
+.mainbox .no {
+  background-color: rgba(101, 132, 226, 0.1);
+  padding: 0.1875rem;
+  border: 1px salmon;
+}
+.mainbox .no .no-hd {
+  border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.mainbox .no .no-hd ul {
+  position: relative;
+  display: flex;
+}
+.mainbox .no .no-hd ul::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .no .no-hd ul::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .no .no-hd ul li {
+  position: relative;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  color: #ffeb7b;
+  flex: 1;
+  text-align: center;
+  font-family: 'electronicFont';
+}
+.mainbox .no .no-hd ul li::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 0;
+  height: 50%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.mainbox .no .no-bd ul {
+  display: flex;
+}
+.mainbox .no .no-bd ul li {
+  padding-top: 0.125rem;
+  line-height: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  flex: 1;
+  text-align: center;
+  height: 0.5rem;
+  font-size: 0.225rem;
+}
+.mainbox .map {
+  position: relative;
+  height: 10.125rem;
+}
+.mainbox .map .map1 {
+  height: 6.475rem;
+  width: 6.475rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+  background: url(../images/map.png);
+  background-size: 100% 100%;
+}
+.mainbox .map .map2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.0375rem;
+  height: 8.0375rem;
+  background: url(../images/lbx.png);
+  background-size: 100% 100%;
+  animation: rotate 15s linear infinite;
+  opacity: 0.6;
+}
+.mainbox .map .map3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.075rem;
+  height: 7.075rem;
+  background: url(../images/jt.png);
+  background-size: 100% 100%;
+  animation: rotate1 15s linear infinite;
+  opacity: 0.6;
+}
+.mainbox .map .chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10.125rem;
+  width: 100%;
+  background-size: 100% 100%;
+}
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotate1 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
+  }
+}
